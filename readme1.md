@@ -96,8 +96,6 @@ echo '.idea' >> .gitignore(把.idea追加到.gitignore)
 搜索文件中带me的
 git log --grep=me
 
-查看
-git remote -v
 
 提交并关联仓库
 git add .
@@ -111,9 +109,14 @@ git remote rm o
 git remote -v
 
 推送到远程仓库上
-git push origin master -u（下次提交不用输origin master）
+git push origin master(可以推送其他分支) -u（下次提交不用输origin master）
 
-
+发布静态页
+发布静态页必须在gh-pages
+git checout -b gh-pages
+git add .
+git commit -m 
+git push origin gh-pages
 
 
 
