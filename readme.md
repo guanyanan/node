@@ -1,6 +1,12 @@
 ##git
 - 分布式
 
+查看版本号
+git --version
+
+查看用户名和邮箱
+git config --list
+
 配置用户名和邮箱（告诉git 你是谁）
 git config --global user.name 自己的用户名
 git config --global user.email 自己的用户名
@@ -27,11 +33,39 @@ cat index.txt
 vi index.txt
 (默认不能编辑 按i键就可以编辑了 编辑完之后按esc键 在最下面按冒号+输入wq保存并推出)
 
-查看状态
+查看git状态
 git status
 
-把文件加到暂存区内
+把文件加到暂存区内(.代表所有的)
 git add .
+
+提交到历史库
+git commit -m
+
+看git日志
+git log
+(不想看按q退出)
+
+查看gi所有日志 
+git reflog
+
+对比代码
+git diff（默认对比工作区和暂存区）
+git diff --cached（对比暂存区和版本库）
+git diff 分支名（对比工作区和版本库）
+
+把文件从暂存区撤
+git reset HEAD .
+
+把文件从暂存区拉回工作区
+git checkout 文件名
+
+回到指定版本
+git reset --hard 版本号（前7位就行）
+
+
+清屏
+clear
 
 ##svn
 - 集中式
